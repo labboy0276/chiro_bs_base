@@ -1,0 +1,33 @@
+{#
+/**
+ * @file
+ * Default theme implementation to display a two-column layout.
+ *
+ * Available variables:
+ * - content: The content for this layout.
+ * - attributes: HTML attributes for the layout <div>.
+ *
+ * @ingroup themeable
+ */
+#}
+{%
+  set classes = [
+    'layout',
+    'layout--image-left',
+  ]
+%}
+{% if content %}
+  <div{{ attributes.addClass(classes) }}>
+    {% if content.image %}
+      <div {{ region_attributes.image.addClass('layout-image', 'com-md-4') }}>
+        {{ content.image }}
+      </div>
+    {% endif %}
+
+    {% if content.text %}
+      <div {{ region_attributes.text.addClass('layout-text', 'com-md-8') }}>
+        {{ content.text }}
+      </div>
+    {% endif %}
+  </div>
+{% endif %}

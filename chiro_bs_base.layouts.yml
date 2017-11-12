@@ -1,0 +1,11 @@
+image_left:
+  label: 'Image Left'
+  path: layouts/image_left
+  template: layout--image-left
+  category: 'Paragraphs'
+  default_region: first
+  regions:
+    image:
+      label: Image
+    text:
+      label: Text

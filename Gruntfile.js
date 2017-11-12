@@ -47,8 +47,7 @@ module.exports = function(grunt) {
           outputStyle: 'nested'
         },
         files: {
-          'dist/css/built.css': 'assets/style/main.scss',
-          'dist/css/print.css': 'assets/style/print.scss',
+          'dist/css/built.css': 'assets/style/main.scss'
         }
       },
       dist: {
@@ -56,8 +55,7 @@ module.exports = function(grunt) {
           compressed: true
         },
         files: {
-          'dist/css/built.css': 'assets/style/main.scss',
-          'dist/css/print.css': 'assets/style/print.scss',
+          'dist/css/built.css': 'assets/style/main.scss'
         }
       }
     },
@@ -65,10 +63,6 @@ module.exports = function(grunt) {
       css:{
         src: 'dist/css/built.css',
         dest: 'dist/css/built.min.css'
-      },
-      print:{
-        src: 'dist/css/print.css',
-        dest: 'dist/css/print.min.css'
       }
     }
   };
