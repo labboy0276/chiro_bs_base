@@ -1,0 +1,23 @@
+{
+  "name": "chiro_bs_base",
+  "version": "0.0.1",
+  "description": "Chiro Bootstrap Base Subtheme Sassy SaSS",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "authors": [
+    "John Ouellet <labboy0276@yahoo.com>"
+  ],
+  "license": "MIT",
+  "devDependencies": {
+    "grunt": "latest",
+    "grunt-sass": "latest",
+    "grunt-contrib-watch": "latest",
+    "grunt-contrib-uglify": "latest",
+    "grunt-contrib-concat": "latest",
+    "grunt-contrib-cssmin": "latest"
+  },
+  "dependencies": {
+    "load-grunt-tasks": "latest"
+  }
+}

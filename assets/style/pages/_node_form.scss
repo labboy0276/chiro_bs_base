@@ -1,0 +1,29 @@
+/**
+ * Node Add / Edit / Clone Pages
+ */
+
+.clone, .add, .edit {
+  // Remove tabs for editors.
+  &.editor {
+    margin-bottom: 25px !important;
+    .tabs--primary.nav-tabs,
+    #edit-field-notes-0-format,
+    .form-type-vertical-tabs.js-form-type-vertical-tabs,
+    #edit-preview {
+      display: none;
+    }
+    #edit-actions {
+      text-align: center;
+      #edit-submit {
+        padding: 15px 25px;
+        font-size: 20px;
+      }
+    }
+  }
+}
+
+.clone, .edit {
+  .paragraphs-dropbutton-wrapper {
+    display: none;
+  }
+}

@@ -1,0 +1,129 @@
+/**
+ * Tweaks to all entities on print
+ */
+
+body {
+  margin: 2px;
+}
+
+.entity-content {
+  .top-row {
+    margin-top: 15px;
+    .col {
+      width: 33.33333333%;
+      float: left;
+      position: relative;
+      min-height: 1px;
+      padding-left: 15px;
+      padding-right: 15px;
+      display: block;
+    }
+    .field--item {
+      font-size: 22px;
+    }
+    .field--label {
+      border-top: 1px solid black;
+      font-weight: normal;
+    }
+  }
+  .bottom-row {
+    margin-top: 15px;
+    .field--label {
+      font-weight: normal;
+      font-size: 22px;
+    }
+    .field--item {
+      padding: 5px 5px 25px;
+      border: 1px solid black;
+    }
+  }
+}
+
+div {
+  // Node Psedudo View Table
+  &.table.field-lake-view {
+    display: block;
+    margin-top: 25px;
+    width: 100%;
+    max-width: 100%;
+    margin-bottom: 21px;
+    background-color: transparent;
+    border-collapse: collapse;
+    border-spacing: 0;
+    .thead {
+      border-top: 1px solid black;
+      border-left: 1px solid black;
+      border-bottom: 1px solid black;
+      display: block;
+      float: left;
+      vertical-align: middle;
+      border-color: inherit;
+      border-collapse: collapse;
+      .tr {
+        display: block;
+        vertical-align: inherit;
+        border-color: inherit;
+        .th {
+          display: block;
+          margin: 0;
+          padding: 16px 30px 16px 8px;
+          font-size: 18px;
+          border-bottom: 1px solid black;
+          vertical-align: bottom;
+          line-height: 1.42857143;
+          text-align: left;
+          &.trash {
+            border-bottom: none;
+          }
+        }
+      }
+    }
+    .tbody {
+      display: block;
+      float: left;
+      border-left: 1px solid black;
+      vertical-align: middle;
+      border-color: inherit;
+      .tr {
+        display: block;
+        float: left;
+        vertical-align: inherit;
+        border-color: inherit;
+        border-top: 1px solid black;
+      }
+      .td {
+        display: block;
+        border-right: 1px solid black;
+        padding: 0;
+        line-height: 1.42857143;
+        vertical-align: top;
+        .field--type-string {
+          margin: 0;
+          .field-inner-string {
+            border-bottom: 1px solid black;
+            margin: 0;
+            padding: 12px 0;
+            text-align: center;
+            min-height: 58px;
+            span {
+              font-size: 22px;
+            }
+          }
+        }
+        .field--type-boolean {
+          margin: 0;
+          .field-inner-boolean {
+            margin: 0;
+            padding: 7px 10px;
+            border-bottom: 1px solid black;
+            text-align: center;
+            min-height: 58px;
+            span {
+              font-size: 28px;
+            }
+          }
+        }
+      }
+    }
+  }
+}

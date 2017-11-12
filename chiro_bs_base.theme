@@ -1,0 +1,51 @@
+<?php
+
+/**
+ * @file
+ * Functions to support theming in the Chiro Bootstrap Base Subtheme theme.
+ */
+
+use Drupal\chiro_bs_base\ChiroBSBaseSubtheme;
+
+/**
+ * Implements template_preprocess_html().
+ */
+function chiro_bs_base_preprocess_html(&$vars) {
+  // Add in body classes for pages since D8 doesn't do this any longer.
+  $path = explode('/', \Drupal::service('path.current')->getPath());
+  if (isset($path[1])) {
+    if ($path[1] != 'node') {
+      $body_classes[] = $path[1];
+    }
+    else {
+      if (isset($path[2])) {
+        $body_classes[] = $path[2];
+      }
+      $current = implode('/', $path);
+      $alias = \Drupal::service('path.alias_manager')->getAliasByPath($current);
+      $path = explode('/', $alias);
+      $body_classes[] = end($path);
+      // Add in node type.
+      if (isset($vars['node_type'])) {
+        $body_classes[] = 'node-type-' . $vars['node_type'];
+      }
+    }
+  }
+
+  // Add in roles.
+  $current_user = \Drupal::currentUser();
+  $roles = $current_user->getRoles();
+  foreach ($roles as $role) {
+    $body_classes[] = strtolower($role);
+  }
+
+  // Set the classes.
+  $vars['attributes']['class'] = $body_classes;
+}
+
+/**
+ * Implements hook_preprocess_HOOK() for page.html.twig.
+ */
+function chiro_bs_base_preprocess_page(&$vars) {
+  ChiroBSBaseSubtheme::convertBlocks($vars);
+}

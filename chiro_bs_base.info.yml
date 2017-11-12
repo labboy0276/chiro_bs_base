@@ -1,0 +1,14 @@
+name: Chiro Bootstrap Base Subtheme
+type: theme
+description: "Chiro Bootstrap Base Subtheme of Bootstrap"
+core: 8.x
+version: 8.x-0.1
+base theme: bootstrap
+
+regions:
+  content: 'Content'
+
+libraries:
+  - chiro_bs_base.info/global-styling
+  - chiro_bs_base.info/bootstrap
+

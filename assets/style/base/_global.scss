@@ -1,0 +1,25 @@
+/**
+ * System Wide CSS.
+ */
+
+// overwite bootstrap css
+legend {
+  display: block;
+  width: 100%;
+  padding: 0;
+  margin-bottom: 0;
+  font-size: 16px;
+  line-height: inherit;
+  color: #333;
+  border: 0;
+  border-bottom: none;
+}
+
+.btn-success {
+  background-color: $lime;
+  border-color: $lime;
+}
+
+body {
+  margin-top: 0 !important;
+}

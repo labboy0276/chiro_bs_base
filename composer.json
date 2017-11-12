@@ -1,0 +1,13 @@
+{
+  "name": "chiro_bs_base",
+  "description": "Chiro Bootstrap Base Subtheme",
+  "type": "drupal-custom-theme",
+  "license": "GPL-2.0",
+  "homepage": "https://github.com/labboy0276/chiro_bs_base",
+  "authors": [
+      {
+          "name": "John Ouellet",
+          "email": "labboy0276@yahoo.com"
+      }
+  ]
+}

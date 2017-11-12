@@ -1,0 +1,18 @@
+/**
+ * Header SCSS
+ */
+
+header {
+  text-align: center;
+  background-color: $dkblue;
+  padding: 10px 0;
+  margin-bottom: 15px;
+  a {
+    color: white;
+    font-size: 18px;
+    &:hover, &:focus {
+      color: white;
+      text-decoration: none;
+    }
+  }
+}
