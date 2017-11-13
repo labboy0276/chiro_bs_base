@@ -3,9 +3,21 @@ image_left:
   path: layouts/image_left
   template: layout--image-left
   category: 'Paragraphs'
-  default_region: first
+  default_region: image
   regions:
     image:
       label: Image
     text:
       label: Text
+
+image_right:
+  label: 'Image Right'
+  path: layouts/image_right
+  template: layout--image-right
+  category: 'Paragraphs'
+  default_region: image
+  regions:
+    text:
+      label: Text
+    image:
+      label: Image

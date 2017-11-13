@@ -13,21 +13,21 @@
 {%
   set classes = [
     'layout',
-    'layout--image-left',
+    'layout--image-right',
     'row',
   ]
 %}
 {% if content %}
   <div{{ attributes.addClass(classes) }}>
-    {% if content.image %}
-      <div {{ region_attributes.image.addClass('layout-image', 'col-md-4') }}>
-        {{ content.image }}
-      </div>
-    {% endif %}
-
     {% if content.text %}
       <div {{ region_attributes.text.addClass('layout-text', 'col-md-8') }}>
         {{ content.text }}
+      </div>
+    {% endif %}
+
+    {% if content.image %}
+      <div {{ region_attributes.image.addClass('layout-image', 'col-md-4') }}>
+        {{ content.image }}
       </div>
     {% endif %}
   </div>
